@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { UsuarioModel } from '../models/usuario.model';
 
 import { map } from 'rxjs/operators';
-import { firebase } from '../../environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,8 @@ import { firebase } from '../../environments/environment.prod';
 export class AuthService {
 
   private url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty';
-  private apikey =  firebase.apiKey;
- 
+  private apikey =  environment.firebase.apiKey;
+
 
 
   userToken: string;
